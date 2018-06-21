@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Search from '../Search/';
-import Stocks from '../Stocks/';
+import Search from '../Search';
+import Stocks from '../Stocks';
 
 class Main extends Component {
   constructor() {

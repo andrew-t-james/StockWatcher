@@ -3,6 +3,7 @@ html {
 }
 
 body {
+  background-color: #DDDDDD;
   font-family: "IBM Plex Serif", serif;
   font-size: $m-size;
 }
@@ -19,6 +20,6 @@ button:disabled {
   align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   min-width: 960px;
+  padding: 2rem;
 }

@@ -30,11 +30,12 @@ class Search extends Component {
       <form onSubmit={e => this.handleSubmit(e)}>
         <input
           type="text"
+          className="search__input"
           onChange={e => this.handleInputChange(e)}
           value={userInput}
-          placeholder="Please Enter a symbol..."
+          placeholder="Enter stock symbol..."
         />
-        <button>Add</button>
+        <button className="search__button">Add</button>
       </form>
     );
   }

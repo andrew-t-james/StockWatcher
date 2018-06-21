@@ -5,12 +5,15 @@ exports[`Search Unit tests should should match snapshot 1`] = `
   onSubmit={[Function]}
 >
   <input
+    className="search__input"
     onChange={[Function]}
-    placeholder="Please Enter a symbol..."
+    placeholder="Enter stock symbol..."
     type="text"
     value=""
   />
-  <button>
+  <button
+    className="search__button"
+  >
     Add
   </button>
 </form>
