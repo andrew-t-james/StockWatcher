@@ -1,12 +1,12 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import Search from '../';
-import renderer from 'react-test-renderer';
+import toJson from 'enzyme-to-json';
 
 describe('Search Unit tests', () => {
   test('it should render', () => {
-    const wrapper = renderer.create(<Search />).toJSON();
+    const wrapper = shallow(<Search />);
 
-    expect(wrapper).toMatchSnapshot();
+    expect(toJson(wrapper)).toMatchSnapshot();
   });
 });
