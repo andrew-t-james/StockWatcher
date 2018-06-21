@@ -46,7 +46,7 @@ exports[`StockCard Unit test should match snapshot 1`] = `
       className="stock-metric"
       style={
         Object {
-          "top": 1.44835,
+          "top": 3.1435,
         }
       }
     >
