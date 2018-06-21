@@ -40,3 +40,11 @@
   /* Firefox 18- */
   color: #B7C3D1;
 }
+
+
+@media screen and (min-width: 400px) {
+  .search__input {
+    padding: 1.5rem 2rem;
+    width: 20rem;
+  }
+}
