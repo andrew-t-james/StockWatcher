@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StockCard Unit test should match snapshot 1`] = `
+<section
+  className="stock-card"
+>
+  <div
+    className="stock-card__info"
+  >
+    <div>
+      <h4
+        className="stock-card__title"
+      >
+        Apple Inc.
+      </h4>
+      <p
+        className="stock-card__short-name"
+      >
+        AAPL
+      </p>
+    </div>
+    <p
+      className="stock-card__change negative-change"
+    >
+      <span
+        className="stock-card__pointer"
+      >
+         ▼
+      </span>
+      -1.26
+       (
+      1.02
+      %)
+    </p>
+    <p
+      className="stock-card__price"
+    >
+      $
+      185.24
+    </p>
+  </div>
+  <div
+    className="stock-card-average"
+  >
+    <span
+      className="stock-metric"
+      style={
+        Object {
+          "top": 1.44835,
+        }
+      }
+    >
+      ►
+    </span>
+    <p>
+      188.35
+    </p>
+    <p>
+      185.93
+    </p>
+  </div>
+</section>
+`;

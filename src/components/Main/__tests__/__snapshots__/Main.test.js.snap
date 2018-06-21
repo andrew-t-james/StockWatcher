@@ -14,7 +14,7 @@ exports[`Main unit test should match snapshot 1`] = `
     stocks={
       Array [
         Object {
-          "change": 1.26,
+          "change": -1.26,
           "high": 188.35,
           "latestPrice": 185.24,
           "low": 185.93,

@@ -29,7 +29,7 @@ const StockCard = props => {
       </div>
 
       <div className="stock-card-average">
-        <span className="stock-metric" style={{ top: high.toFixed(2) / 100 - change }}>
+        <span className="stock-metric" style={{ top: high.toFixed(2) / 1000 - change }}>
           &#x25ba;
         </span>
         <p>{high.toFixed(2)}</p>
