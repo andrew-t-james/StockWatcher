@@ -17,7 +17,7 @@ describe('Search Unit tests', () => {
     expect(button).toBe(1);
   });
 
-  test('should render', () => {
+  test('should should match snapshot', () => {
     expect(toJson(wrapper)).toMatchSnapshot();
   });
 
@@ -42,9 +42,7 @@ describe('Search Unit tests', () => {
       wrapper.find('form').simulate('submit', {
         preventDefault: jest.fn(),
         target: {
-          value: {
-            reset: jest.fn(),
-          },
+          reset: jest.fn(),
         },
       });
 

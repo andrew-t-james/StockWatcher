@@ -20,8 +20,8 @@ class Search extends Component {
   handleSubmit(e) {
     e.preventDefault();
     console.log('working'); // TODO call fetch method here
+    e.target.reset();
     this.setState({ userInput: '' });
-    e.target.value.reset();
   }
 
   render() {
