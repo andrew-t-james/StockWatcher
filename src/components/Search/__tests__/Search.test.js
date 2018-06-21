@@ -25,7 +25,7 @@ describe('Search Unit tests', () => {
     beforeEach(() => {
       wrapper.find('input').simulate('change', {
         target: {
-          value: 'new comment',
+          value: 'GOOG',
         },
       });
       wrapper.update();
@@ -33,7 +33,7 @@ describe('Search Unit tests', () => {
 
     test('updates on change and handles submit', () => {
       const actual = wrapper.find('input').prop('value');
-      const expected = 'new comment';
+      const expected = 'GOOG';
 
       expect(actual).toEqual(expected);
     });
