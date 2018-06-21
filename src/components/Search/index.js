@@ -18,16 +18,17 @@ class Search extends Component {
   }
 
   handleSubmit(e) {
+    const { userInput } = this.state;
     e.preventDefault();
-    console.log('working'); // TODO call fetch method here
-    e.target.reset();
+    this.props.getStockQuotes(userInput); // TODO call fetch method here
     this.setState({ userInput: '' });
+    e.target.reset();
   }
 
   render() {
     const { userInput } = this.state;
     return (
-      <form onSubmit={e => this.handleSubmit(e)}>
+      <form className="fetch-stock" onSubmit={e => this.handleSubmit(e)}>
         <input
           type="text"
           className="search__input"

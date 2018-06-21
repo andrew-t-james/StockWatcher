@@ -2,6 +2,7 @@
 
 exports[`Search Unit tests should should match snapshot 1`] = `
 <form
+  className="fetch-stock"
   onSubmit={[Function]}
 >
   <input

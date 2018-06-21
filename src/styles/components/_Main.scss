@@ -1,10 +1,14 @@
 .wrapper {
+  align-items: center;
   background-color: #F0F0F0;
-  height: 50rem;
+  display: flex;
+  flex-direction: column;
   left: 50%;
+  min-height: 50rem;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
+  width: 1024px;
 }
 
 .main-header {

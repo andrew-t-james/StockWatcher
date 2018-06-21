@@ -31,4 +31,12 @@ describe('Stocks Units Tests', () => {
     const expected = 2;
     expect(actual).toBe(expected);
   });
+
+  test('should render message when no data is present', () => {
+    const wrapper = shallow(<Stocks stocks={[]} />);
+    const expected = 'No Stocks yet!';
+    const actual = wrapper.find('h2').text();
+
+    expect(actual).toBe(expected);
+  });
 });

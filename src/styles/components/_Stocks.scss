@@ -2,7 +2,12 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 3rem 0;
+  margin: 3rem auto;
+}
+
+.stocks-container-title {
+  color: #BBBBBB;
+  margin-top: 6rem;
 }
 
 @media screen and (max-width: 795px) {

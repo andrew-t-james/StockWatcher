@@ -26,6 +26,7 @@ describe('StockCard Unit test', () => {
       latestPrice: 1161.44,
       change: 8.4,
     };
+
     const wrapper = shallow(<StockCard {...mockData} />);
     const actual = wrapper.find('.positive-change').text();
     const expected = ' ▲8.4 (1.01%)';

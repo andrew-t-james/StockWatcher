@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import axios from 'axios';
+import { sanitizedStockInfo } from '../../data-helpers/data-helpers';
 import Search from '../Search';
 import Stocks from '../Stocks';
 
@@ -6,25 +8,27 @@ class Main extends Component {
   constructor() {
     super();
     this.state = {
-      stocks: [
-        {
-          name: 'Apple Inc.',
-          shortName: 'AAPL',
-          high: 188.35,
-          low: 185.93,
-          latestPrice: 185.24,
-          change: -1.26,
-        },
-        {
-          name: 'Alphabet Inc.',
-          shortName: 'GOOG',
-          high: 1177.295,
-          low: 1153.83,
-          latestPrice: 1161.44,
-          change: -8.4,
-        },
-      ],
+      stocks: [],
     };
+
+    this.getStockQuotes = this.getStockQuotes.bind(this);
+  }
+
+  getStockQuotes(tickerName) {
+    const self = this;
+    const sanitizedTickerName = tickerName.toLowerCase();
+    const url = `https://api.iextrading.com/1.0/stock/${sanitizedTickerName}/batch?types=quote`;
+    axios
+      .get(url)
+      .then(response => sanitizedStockInfo(response.data.quote))
+      .then(newStockQuote => {
+        this.setState({
+          stocks: [newStockQuote, ...this.state.stocks],
+        });
+      })
+      .catch(error => {
+        console.error(error);
+      });
   }
 
   render() {
@@ -32,7 +36,7 @@ class Main extends Component {
     return (
       <main className="wrapper">
         <h1 className="main-header">Stock Watcher</h1>
-        <Search />
+        <Search getStockQuotes={this.getStockQuotes} />
         <Stocks stocks={stocks} />
       </main>
     );

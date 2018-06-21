@@ -5,8 +5,9 @@ import Search from '../index';
 
 describe('Search Unit tests', () => {
   let wrapper;
+  const mockFunc = jest.fn();
 
-  beforeEach(() => (wrapper = shallow(<Search />)));
+  beforeEach(() => (wrapper = shallow(<Search getStockQuotes={mockFunc} />)));
   afterEach(() => wrapper.unmount());
 
   test('should ', () => {
