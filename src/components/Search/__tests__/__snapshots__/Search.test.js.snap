@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search Unit tests it should render 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <input
+    onChange={[Function]}
+    placeholder="Please Enter a symbol..."
+    type="text"
+    value=""
+  />
+  <button>
+    Add
+  </button>
+</form>
+`;

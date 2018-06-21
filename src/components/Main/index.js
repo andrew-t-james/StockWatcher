@@ -61,11 +61,11 @@ class Main extends Component {
   render() {
     const { stocks } = this.state;
     return (
-      <div className="wrapper">
-        <h1>hello world</h1>
+      <main className="wrapper">
+        <h1 className="main-header">Stock Watcher</h1>
         <Search />
         <Stocks stocks={stocks} />
-      </div>
+      </main>
     );
   }
 }

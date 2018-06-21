@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "IBM Plex Serif", serif;
   font-size: $m-size;
 }
 
@@ -13,4 +13,12 @@ button {
 
 button:disabled {
   cursor: default;
+}
+
+.wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 960px;
 }
