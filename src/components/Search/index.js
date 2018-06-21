@@ -21,7 +21,7 @@ class Search extends Component {
     e.preventDefault();
     console.log('working'); // TODO call fetch method here
     this.setState({ userInput: '' });
-    e.target.value = '';
+    e.target.value.reset();
   }
 
   render() {
