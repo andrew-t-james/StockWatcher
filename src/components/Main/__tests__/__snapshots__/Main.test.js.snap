@@ -11,7 +11,26 @@ exports[`Main unit test should match snapshot 1`] = `
   </h1>
   <Search />
   <Stocks
-    stocks={Array []}
+    stocks={
+      Array [
+        Object {
+          "change": 1.26,
+          "high": 188.35,
+          "latestPrice": 185.24,
+          "low": 185.93,
+          "name": "Apple Inc.",
+          "shortName": "AAPL",
+        },
+        Object {
+          "change": -8.4,
+          "high": 1177.295,
+          "latestPrice": 1161.44,
+          "low": 1153.83,
+          "name": "Alphabet Inc.",
+          "shortName": "GOOG",
+        },
+      ]
+    }
   />
 </main>
 `;

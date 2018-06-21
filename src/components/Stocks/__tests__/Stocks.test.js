@@ -29,7 +29,6 @@ describe('Stocks Units Tests', () => {
   test('should render correct amount of Stock Cards', () => {
     const actual = wrapper.find(StockCard).length;
     const expected = 2;
-
     expect(actual).toBe(expected);
   });
 });
