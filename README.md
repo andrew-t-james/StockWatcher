@@ -14,7 +14,7 @@ $ yarn run dev-server
 Navigate to  `http://localhost:8080/?`
 
 ### Steps to run Test Suite
-1.Ad
+1.
 ```
 $ yarn test
 ```
