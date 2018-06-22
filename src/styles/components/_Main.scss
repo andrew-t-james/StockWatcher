@@ -15,6 +15,16 @@
   font-weight: 400;
 }
 
+.footer {
+  bottom: 2rem;
+  left: 2rem;
+  position: fixed;
+
+  &__link {
+    text-decoration: none;
+  }
+}
+
 @media screen and (min-width: 550px) {
   .wrapper {
     width: 1024px;

@@ -37,14 +37,23 @@ class Main extends Component {
     const { stocks, hasError } = this.state;
 
     return (
-      <main className="wrapper">
-        <section className="header">
-          <h1 className="main-header">Stock Watcher</h1>
-        </section>
-        <Search getStockQuotes={this.getStockQuotes} />
-        <Stocks stocks={stocks} />
-        {hasError && <ToastMessage />}
-      </main>
+      <div>
+        <main className="wrapper">
+          <section className="header">
+            <h1 className="main-header">Stock Watcher</h1>
+          </section>
+          <Search getStockQuotes={this.getStockQuotes} />
+          <Stocks stocks={stocks} />
+          {hasError && <ToastMessage />}
+        </main>
+        <footer className="footer">
+          Data provided for free by
+          <a className="footer__link" href="https://iextrading.com/developer/">
+            {' '}
+            IEX
+          </a>
+        </footer>
+      </div>
     );
   }
 }

@@ -1,23 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Main unit test should match snapshot 1`] = `
-<main
-  className="wrapper"
->
-  <section
-    className="header"
+<div>
+  <main
+    className="wrapper"
   >
-    <h1
-      className="main-header"
+    <section
+      className="header"
     >
-      Stock Watcher
-    </h1>
-  </section>
-  <Search
-    getStockQuotes={[Function]}
-  />
-  <Stocks
-    stocks={Array []}
-  />
-</main>
+      <h1
+        className="main-header"
+      >
+        Stock Watcher
+      </h1>
+    </section>
+    <Search
+      getStockQuotes={[Function]}
+    />
+    <Stocks
+      stocks={Array []}
+    />
+  </main>
+  <footer
+    className="footer"
+  >
+    Data provided for free by
+    <a
+      className="footer__link"
+      href="https://iextrading.com/developer/"
+    >
+       
+      IEX
+    </a>
+  </footer>
+</div>
 `;
