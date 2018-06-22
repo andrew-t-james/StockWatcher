@@ -3,15 +3,18 @@
 ### Steps to run project
 **You can use npm or Yarn. I am using yarn in the example**
 
+1. Clone this repo  https://github.com/andrew-t-james/StockWatcher
+
+2.
 ```
 $ yarn install
 $ yarn run dev-server
 ```
-
+3.
 Navigate to  `http://localhost:8080/?`
 
 ### Steps to run Test Suite
-
+1.Ad
 ```
 $ yarn test
 ```
