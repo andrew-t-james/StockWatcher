@@ -20,7 +20,7 @@ class Search extends Component {
   handleSubmit(e) {
     const { userInput } = this.state;
     e.preventDefault();
-    this.props.getStockQuotes(userInput); // TODO call fetch method here
+    this.props.getStockQuotes(userInput);
     this.setState({ userInput: '' });
     e.target.reset();
   }
@@ -28,17 +28,19 @@ class Search extends Component {
   render() {
     const { userInput } = this.state;
     return (
-      <form className="fetch-stock" onSubmit={e => this.handleSubmit(e)}>
-        <input
-          type="text"
-          className="search__input"
-          onChange={e => this.handleInputChange(e)}
-          value={userInput}
-          required
-          placeholder="Enter stock symbol..."
-        />
-        <button className="search__button">Add</button>
-      </form>
+      <div className="search">
+        <form className="search-form" onSubmit={e => this.handleSubmit(e)}>
+          <input
+            type="text"
+            className="search__input"
+            onChange={e => this.handleInputChange(e)}
+            value={userInput}
+            required
+            placeholder="Enter stock symbol..."
+          />
+          <button className="search__button">Add</button>
+        </form>
+      </div>
     );
   }
 }

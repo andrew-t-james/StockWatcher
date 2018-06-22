@@ -7,25 +7,29 @@ const StockCard = props => {
     <section className="stock-card">
       <div className="stock-card__info">
         <div>
-          <h4 className="stock-card__title">{name}</h4>
+          <h4 className="stock-card__title">{name.length > 13 ? `${name.substring(0, 13)}...` : name}</h4>
           <p className="stock-card__short-name">{shortName}</p>
         </div>
 
         {change < 0 && (
-          <p className="stock-card__change negative-change">
-            <span className="stock-card__pointer"> &#x25bc;</span>
-            {change} ({(change / latestPrice).toFixed(2)}%)
-          </p>
+          <div className="stock-card__change">
+            <p className=" negative-change">
+              <span className="stock-card__pointer"> &#x25bc;</span>
+              {change} ({(change / latestPrice).toFixed(2)}%)
+            </p>
+            <p className="stock-card__price">${latestPrice}</p>
+          </div>
         )}
 
         {change > 0 && (
-          <p className="stock-card__change positive-change">
-            <span className="stock-card__pointer"> &#x25b2;</span>
-            {change} ({(change / latestPrice).toFixed(2)}%)
-          </p>
+          <div className="stock-card__change">
+            <p className="stock-card__change positive-change">
+              <span className="stock-card__pointer"> &#x25b2;</span>
+              {change} ({(change / latestPrice).toFixed(2)}%)
+            </p>
+            <p className="stock-card__price">${latestPrice}</p>
+          </div>
         )}
-
-        <p className="stock-card__price">${latestPrice}</p>
       </div>
 
       <div className="stock-card-average">

@@ -38,7 +38,9 @@ class Main extends Component {
 
     return (
       <main className="wrapper">
-        <h1 className="main-header">Stock Watcher</h1>
+        <section className="header">
+          <h1 className="main-header">Stock Watcher</h1>
+        </section>
         <Search getStockQuotes={this.getStockQuotes} />
         <Stocks stocks={stocks} />
         {hasError && <ToastMessage />}

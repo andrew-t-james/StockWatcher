@@ -1,12 +1,13 @@
 .stock-card {
   background-color: #FFFFFF;
+  color: #8C8885;
   display: flex;
   flex-wrap: wrap;
   height: 10rem;
   justify-content: space-between;
   margin: 1rem;
   padding: 1rem;
-  width: 40rem;
+  width: 35rem;
 
   &__title {
     font-size: 2rem;
@@ -61,4 +62,30 @@
 
 .negative-change {
   color: #FF0000;
+}
+
+@media screen and (max-width: 480px) {
+  .stock-card {
+    height: 5rem;
+    width: 26rem;
+
+    &__title {
+      font-size: 1.6rem;
+    }
+
+    &__info {
+      flex-direction: row;
+      width: 100%;
+    }
+
+    &__change {
+      align-items: flex-end;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-average {
+      display: none;
+    }
+  }
 }

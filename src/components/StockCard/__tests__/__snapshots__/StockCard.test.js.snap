@@ -19,25 +19,29 @@ exports[`StockCard Unit test should match snapshot 1`] = `
         AAPL
       </p>
     </div>
-    <p
-      className="stock-card__change negative-change"
+    <div
+      className="stock-card__change"
     >
-      <span
-        className="stock-card__pointer"
+      <p
+        className=" negative-change"
       >
-         ▼
-      </span>
-      -1.26
-       (
-      -0.01
-      %)
-    </p>
-    <p
-      className="stock-card__price"
-    >
-      $
-      185.24
-    </p>
+        <span
+          className="stock-card__pointer"
+        >
+           ▼
+        </span>
+        -1.26
+         (
+        -0.01
+        %)
+      </p>
+      <p
+        className="stock-card__price"
+      >
+        $
+        185.24
+      </p>
+    </div>
   </div>
   <div
     className="stock-card-average"

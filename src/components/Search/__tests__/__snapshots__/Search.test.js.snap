@@ -1,22 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Search Unit tests should should match snapshot 1`] = `
-<form
-  className="fetch-stock"
-  onSubmit={[Function]}
+<div
+  className="search"
 >
-  <input
-    className="search__input"
-    onChange={[Function]}
-    placeholder="Enter stock symbol..."
-    required={true}
-    type="text"
-    value=""
-  />
-  <button
-    className="search__button"
+  <form
+    className="search-form"
+    onSubmit={[Function]}
   >
-    Add
-  </button>
-</form>
+    <input
+      className="search__input"
+      onChange={[Function]}
+      placeholder="Enter stock symbol..."
+      required={true}
+      type="text"
+      value=""
+    />
+    <button
+      className="search__button"
+    >
+      Add
+    </button>
+  </form>
+</div>
 `;
