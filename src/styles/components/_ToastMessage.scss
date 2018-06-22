@@ -1,0 +1,20 @@
+.toast-message {
+  animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  background-color: #FF0000;
+  border: 1px solid black;
+  border-radius: 4px;
+  bottom: 10%;
+  color: #FFFFFF;
+  padding: 2rem;
+  position: absolute;
+  transition: all ease-in 0.2s;
+}
+
+@-webkit-keyframes slide-top {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100px);
+  }
+}

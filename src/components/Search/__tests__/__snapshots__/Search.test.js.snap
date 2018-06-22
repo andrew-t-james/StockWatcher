@@ -9,6 +9,7 @@ exports[`Search Unit tests should should match snapshot 1`] = `
     className="search__input"
     onChange={[Function]}
     placeholder="Enter stock symbol..."
+    required={true}
     type="text"
     value=""
   />

@@ -34,6 +34,7 @@ class Search extends Component {
           className="search__input"
           onChange={e => this.handleInputChange(e)}
           value={userInput}
+          required
           placeholder="Enter stock symbol..."
         />
         <button className="search__button">Add</button>

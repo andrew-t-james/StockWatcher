@@ -3,19 +3,20 @@ import axios from 'axios';
 import { sanitizedStockInfo } from '../../data-helpers/data-helpers';
 import Search from '../Search';
 import Stocks from '../Stocks';
+import ToastMessage from '../ToastMessage';
 
 class Main extends Component {
   constructor() {
     super();
     this.state = {
       stocks: [],
+      hasError: false,
     };
 
     this.getStockQuotes = this.getStockQuotes.bind(this);
   }
 
   getStockQuotes(tickerName) {
-    const self = this;
     const sanitizedTickerName = tickerName.toLowerCase();
     const url = `https://api.iextrading.com/1.0/stock/${sanitizedTickerName}/batch?types=quote`;
     axios
@@ -24,20 +25,23 @@ class Main extends Component {
       .then(newStockQuote => {
         this.setState({
           stocks: [newStockQuote, ...this.state.stocks],
+          hasError: false,
         });
       })
       .catch(error => {
-        console.error(error);
+        this.setState({ hasError: true });
       });
   }
 
   render() {
-    const { stocks } = this.state;
+    const { stocks, hasError } = this.state;
+
     return (
       <main className="wrapper">
         <h1 className="main-header">Stock Watcher</h1>
         <Search getStockQuotes={this.getStockQuotes} />
         <Stocks stocks={stocks} />
+        {hasError && <ToastMessage />}
       </main>
     );
   }

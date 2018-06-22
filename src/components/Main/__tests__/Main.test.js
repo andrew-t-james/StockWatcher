@@ -4,6 +4,7 @@ import toJson from 'enzyme-to-json';
 import Main from '../index';
 import Search from '../../Search';
 import Stocks from '../../Stocks';
+import ToastMessage from '../../ToastMessage';
 
 describe('Main unit test', () => {
   let wrapper;
@@ -24,6 +25,17 @@ describe('Main unit test', () => {
     const expected = { stocks: [] };
 
     expect(actual).toEqual(expected);
+  });
+
+  test('should show error message if ticker is incorrect', async () => {
+    const expected = 1;
+
+    wrapper.setState({
+      hasError: true,
+    });
+
+    const actual = wrapper.find(ToastMessage).length;
+    expect(actual).toBe(expected);
   });
 
   test('should match snapshot', () => {
