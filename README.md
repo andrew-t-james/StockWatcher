@@ -5,16 +5,19 @@
 
 1. Clone this repo  https://github.com/andrew-t-james/StockWatcher
 
-2.
+2. `cd` into directory
+
+3.
 ```
 $ yarn install
 $ yarn run dev-server
 ```
-3.
-Navigate to  `http://localhost:8080/?`
+
+4. Navigate to  `http://localhost:8080`
+
 
 ### Steps to run Test Suite
-1.
+
 ```
 $ yarn test
 ```
