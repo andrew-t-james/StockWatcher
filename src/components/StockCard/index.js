@@ -14,14 +14,14 @@ const StockCard = props => {
         {change < 0 && (
           <p className="stock-card__change negative-change">
             <span className="stock-card__pointer"> &#x25bc;</span>
-            {change} ({(high / latestPrice).toFixed(2)}%)
+            {change} ({(change / latestPrice).toFixed(2)}%)
           </p>
         )}
 
         {change > 0 && (
           <p className="stock-card__change positive-change">
             <span className="stock-card__pointer"> &#x25b2;</span>
-            {change} ({(high / latestPrice).toFixed(2)}%)
+            {change} ({(change / latestPrice).toFixed(2)}%)
           </p>
         )}
 

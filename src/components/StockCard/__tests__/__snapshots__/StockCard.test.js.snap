@@ -29,7 +29,7 @@ exports[`StockCard Unit test should match snapshot 1`] = `
       </span>
       -1.26
        (
-      1.02
+      -0.01
       %)
     </p>
     <p

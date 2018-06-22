@@ -29,13 +29,13 @@ describe('StockCard Unit test', () => {
 
     const wrapper = shallow(<StockCard {...mockData} />);
     const actual = wrapper.find('.positive-change').text();
-    const expected = ' ▲8.4 (1.01%)';
+    const expected = ' ▲8.4 (0.01%)';
     expect(actual).toBe(expected);
   });
 
   test('should render conditionally render negative stock quotes', () => {
     const actual = wrapper.find('.negative-change').text();
-    const expected = ' ▼-1.26 (1.02%)';
+    const expected = ' ▼-1.26 (-0.01%)';
     expect(actual).toBe(expected);
   });
 
