@@ -28,7 +28,7 @@ class Search extends Component {
   render() {
     const { userInput } = this.state;
     return (
-      <div className="search">
+      <section className="search">
         <form className="search-form" onSubmit={e => this.handleSubmit(e)}>
           <input
             type="text"
@@ -40,7 +40,7 @@ class Search extends Component {
           />
           <button className="search__button">Add</button>
         </form>
-      </div>
+      </section>
     );
   }
 }

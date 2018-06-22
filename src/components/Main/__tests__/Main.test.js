@@ -27,6 +27,13 @@ describe('Main unit test', () => {
     expect(actual).toEqual(expected);
   });
 
+  test('should pass default props to Stocks component', () => {
+    const actual = wrapper.find(Search).props();
+    const expected = { getStockQuotes: wrapper.instance().getStockQuotes };
+
+    expect(actual).toEqual(expected);
+  });
+
   test('should show error message if ticker is incorrect', async () => {
     const expected = 1;
 
