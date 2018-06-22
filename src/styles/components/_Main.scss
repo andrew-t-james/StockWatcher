@@ -8,10 +8,15 @@
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 1024px;
 }
 
 .main-header {
   font-size: 4rem;
   font-weight: 400;
+}
+
+@media screen and (min-width: 550px) {
+  .wrapper {
+    width: 1024px;
+  }
 }
