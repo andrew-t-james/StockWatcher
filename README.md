@@ -1,5 +1,9 @@
 # Take Home Stock Watcher
 
+### View the project live
+
+[Stock Watcher](https://stock-watcher.surge.sh)
+
 ### Steps to run project
 **You can use npm or Yarn. I am using yarn in the example**
 
