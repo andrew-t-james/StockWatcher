@@ -15,7 +15,7 @@ const StockCard = props => {
           <div className="stock-card__change">
             <p className=" negative-change">
               <span className="stock-card__pointer"> &#x25bc;</span>
-              {change} ({(change / latestPrice).toFixed(2)}%)
+              {change} ({((change * 100) / latestPrice).toFixed(2)}%)
             </p>
             <p className="stock-card__price">${latestPrice}</p>
           </div>
@@ -25,7 +25,7 @@ const StockCard = props => {
           <div className="stock-card__change">
             <p className="stock-card__change positive-change">
               <span className="stock-card__pointer"> &#x25b2;</span>
-              {change} ({(change / latestPrice).toFixed(2)}%)
+              {change} ({((change * 100) / latestPrice).toFixed(2)}%)
             </p>
             <p className="stock-card__price">${latestPrice}</p>
           </div>
